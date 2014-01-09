@@ -1,0 +1,25 @@
+!!! 5
+html(ng-app='kiosk')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        title=title
+        meta(name="viewport", content='width=device-width, initial-scale=1')
+        script(type='text/javascript')
+          var port = #{port}
+        link(rel='stylesheet',href='css/font-awesome.css')
+        != css('style')
+        script(src="/socket.io/socket.io.js")
+        script(src="/js/lib/angular.min.js")
+        script(src="/js/lib/angular-route.min.js")
+        script(src="/js/lib/underscore.js")
+        script(src="/js/lib/jquery.js")
+        script(src="/js/lib/caress.js")
+        script(src="/js/lib/moment.js")
+        != js('app')
+        != js('controllers')
+        != js('directives')
+    body
+        div(ng-view)
+            block content
+
